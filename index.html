@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+  <link rel="icon" href="https://www.google.com/favicon.ico" />
+  <style>
+    body { margin:0; overflow:hidden; font-family:Arial, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh; }
+    .loading { font-size:1.3rem; color:#555; }
+  </style>
+</head>
+<body>
+  <div class="loading">Loading...</div>
+
+  <script>
+    // Open a disguised about:blank window
+    const win = window.open("about:blank", "_blank");
+
+    if (win) {
+      // Create the iframe
+      const frame = win.document.createElement("iframe");
+      frame.src = "https://chat.librechat.ai";
+      frame.style.cssText = "width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;";
+
+      // Append to window
+      win.document.body.appendChild(frame);
+
+      // Spoof tab appearance
+      win.document.title = "Google";
+      const link = win.document.createElement("link");
+      link.rel = "icon";
+      link.href = "https://www.google.com/favicon.ico";
+      win.document.head.appendChild(link);
+    } else {
+      document.body.innerHTML = "<p>Popup blocked! Allow popups and try again.</p>";
+    }
+  </script>
+</body>
+</html>
