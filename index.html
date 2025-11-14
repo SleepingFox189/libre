@@ -14,26 +14,27 @@
   <div class="loading">Loading...</div>
 
   <script>
-    // Open a disguised about:blank window
-    const win = window.open("about:blank", "_blank");
+    // Replace the current page (prevents history entry)
+    location.replace("about:blank");
+
+    // Open disguised about:blank window
+    const win = window.open("about:blank", "_blank", "noopener,noreferrer");
+
+    // Close the original tab immediately
+    window.close();
 
     if (win) {
-      // Create the iframe
       const frame = win.document.createElement("iframe");
       frame.src = "https://chat.librechat.ai";
       frame.style.cssText = "width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;";
 
-      // Append to window
       win.document.body.appendChild(frame);
 
-      // Spoof tab appearance
       win.document.title = "Google";
       const link = win.document.createElement("link");
       link.rel = "icon";
       link.href = "https://www.google.com/favicon.ico";
       win.document.head.appendChild(link);
-    } else {
-      document.body.innerHTML = "<p>Popup blocked! Allow popups and try again.</p>";
     }
   </script>
 </body>
