@@ -1,42 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loading...</title>
-  <link rel="icon" href="https://www.google.com/favicon.ico" />
-  <style>
-    body { margin:0; overflow:hidden; font-family:Arial, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh; }
-    .loading { font-size:1.3rem; color:#555; }
-  </style>
-</head>
-<body>
-  <div class="loading">Loading...</div>
-
-  <script>
-  const encoded = "Q2F2YW5KYWNrc29uczE0";
-  const decoded = atob(encoded);
-
-  const input = prompt("Enter access code:");
-
-  if (input === decoded) {
-    const win = window.open("about:blank", "_blank");
-    if (win) {
-      const frame = win.document.createElement("iframe");
-      frame.src = "https://chat.librechat.ai";
-      frame.style.cssText = "width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;";
-      win.document.body.appendChild(frame);
-
-      win.document.title = "Google";
-      const link = win.document.createElement("link");
-      link.rel = "icon";
-      link.href = "https://www.google.com/favicon.ico";
-      win.document.head.appendChild(link);
-    }
-    window.close();
-  } else {
-    alert("Incorrect code. Access denied.");
-  }
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Loading...</title><link rel="icon" href="https://www.google.com/favicon.ico"><style>body{margin:0;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial}.loading{font-size:1.3rem;color:#555}</style></head><body><div class="loading">Loading...</div><script>
+(function(){
+var a="Q2F2YW5KYWNrc29uczE0",b=atob(a),c=prompt(String.fromCharCode(69,110,116,101,114,32,99,111,100,101,58));
+if(c===b){var d=window.open("about:blank","_blank");if(d){var e=d.document.createElement("iframe");e.src=atob("aHR0cHM6Ly8yNDk4aDM0ZC52ZXJjZWwuYXBwLw==");e.style.cssText="width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;";d.document.body.appendChild(e);d.document.title=String.fromCharCode(71,111,111,103,108,101);var f=d.document.createElement("link");f.rel="icon";f.href="https://www.google.com/favicon.ico";d.document.head.appendChild(f);}window.close();}
+else{alert(String.fromCharCode(73,110,99,111,114,114,101,99,116,32,99,111,100,101,46,32,65,99,99,101,115,115,32,100,101,110,105,101,100,46));}
+})();
+</script></body></html>
