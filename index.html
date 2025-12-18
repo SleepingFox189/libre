@@ -14,25 +14,29 @@
   <div class="loading">Loading...</div>
 
   <script>
-  // Open disguised about:blank window
-  const win = window.open("about:blank", "_blank");
+  const encoded = "Q2F2YW5KYWNrc29uczE0";
+  const decoded = atob(encoded);
 
-  if (win) {
-    const frame = win.document.createElement("iframe");
-    frame.src = "https://chat.librechat.ai";
-    frame.style.cssText = "width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;";
+  const input = prompt("Enter access code:");
 
-    win.document.body.appendChild(frame);
+  if (input === decoded) {
+    const win = window.open("about:blank", "_blank");
+    if (win) {
+      const frame = win.document.createElement("iframe");
+      frame.src = "https://chat.librechat.ai";
+      frame.style.cssText = "width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;";
+      win.document.body.appendChild(frame);
 
-    win.document.title = "Google";
-    const link = win.document.createElement("link");
-    link.rel = "icon";
-    link.href = "https://www.google.com/favicon.ico";
-    win.document.head.appendChild(link);
+      win.document.title = "Google";
+      const link = win.document.createElement("link");
+      link.rel = "icon";
+      link.href = "https://www.google.com/favicon.ico";
+      win.document.head.appendChild(link);
+    }
+    window.close();
+  } else {
+    alert("Incorrect code. Access denied.");
   }
-
-  // Close the original tab
-  window.close();
-</script>
+  </script>
 </body>
 </html>
