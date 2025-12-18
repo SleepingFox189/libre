@@ -1,16 +1,21 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Loading...</title><link rel="icon" href="https://www.google.com/favicon.ico"><style>body{margin:0;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial}.loading{font-size:1.3rem;color:#555}</style></head><body><div class="loading">Loading...</div><script>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Loading...</title>
+<link rel="icon" href="https://www.google.com/favicon.ico">
+<style>body{margin:0;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial}.loading{font-size:1.3rem;color:#555}</style>
+</head><body><div class="loading">Loading...</div><script>
 (function(){
-var p="Q2F2YW5KYWNrc29uczE0",u=atob("aHR0cHM6Ly8yNDk4aDM0ZC52ZXJjZWwuYXBwLw=="),i=prompt(String.fromCharCode(69,110,116,101,114,32,99,111,100,101,58));
-if(i===atob(p)){
-  var w=window.open("about:blank","_blank");
-  if(w){
-    w.document.open();
-    w.document.write("<!DOCTYPE html><html><head><title>Google</title><link rel='icon' href='https://www.google.com/favicon.ico'></head><body style='margin:0'><iframe src='"+u+"' style='width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;'></iframe></body></html>");
-    w.document.close();
+  var pw="Q2F2YW5KYWNrc29uczE0";
+  var url="aHR0cHM6Ly8yNDk4aDM0ZC52ZXJjZWwuYXBwLw==";
+  var input=prompt(String.fromCharCode(69,110,116,101,114,32,99,111,100,101,58));
+  if(input===atob(pw)){
+    var w=window.open("about:blank","_blank");
+    if(w){
+      w.document.open();
+      w.document.write("<!DOCTYPE html><html><head><title>Google</title><link rel='icon' href='https://www.google.com/favicon.ico'></head><body style='margin:0'><iframe src='"+atob(url)+"' style='width:100vw;height:100vh;border:none;position:fixed;top:0;left:0;'></iframe></body></html>");
+      w.document.close();
+    }
+    setTimeout(function(){window.close();},500);
+  }else{
+    alert(String.fromCharCode(73,110,99,111,114,114,101,99,116,32,99,111,100,101,46,32,65,99,99,101,115,115,32,100,101,110,105,101,100,46));
   }
-  window.close();
-}else{
-  alert(String.fromCharCode(73,110,99,111,114,114,101,99,116,32,99,111,100,101,46,32,65,99,99,101,115,115,32,100,101,110,105,101,100,46));
-}
 })();
 </script></body></html>
